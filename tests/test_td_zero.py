@@ -25,7 +25,7 @@ class TestTD(unittest.TestCase):
 
     def test_td_eval(self):
         pi = np.zeros(5)
-        v, i = evaluate_policy_td_zero(pi)
+        v, i = evaluate_policy_td_zero(pi, rewards=[1, -1, -1, -1, 10])
         self.assertTrue(i > 1)
         self.assertTrue(v[4]==0)
         self.assertTrue(v[3]==0)
